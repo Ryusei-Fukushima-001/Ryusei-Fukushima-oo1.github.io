@@ -1,84 +1,121 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="style.css" rel="stylesheet">
-<title>Ryusei-Fukushimaのポートフォリオ</title>
-</head>
-<body>
-<h1>Ryusei-Fukushima</h1>
-<img src="落ち着いた表情の若者.png" width= "280">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 元のCSSファイルを読み込みます（ここはいじらなくてOK） -->
+    <link href="style.css" rel="stylesheet">
+    <title>Ryusei-Fukushimaのポートフォリオ</title>
+  </head>
+  <body>
+    <h1>Ryusei-Fukushima</h1>
+    <!-- 画像ファイルがある場所と同じ場所に置いてください -->
+    <img src="落ち着いた表情の若者.png" width="280" alt="プロフィール画像">
+    
+    <h2>About</h2>
+    <p>
+      読書がすきな大学生です
+    </p>
 
-```
-<h2>About</h2>
-<p>
-  読書がすきな大学生です
-</p>
+    <h3>Profile</h3>
+    <ul>
+      <li>名前　Ryusei Fukushima</li>
+      <li>所在地　兵庫県神戸市</li>
+      <li>得意領域　トレッキング</li>
+    </ul>
 
-<h3>Profile</h3>
-<ul>
-  <li>名前　Ryusei Fukushima</li>
-  <li>所在地　兵庫県神戸市</li>
-  <li>得意領域　トレッキング</li>
-</ul>
+    <h3>Skills</h3>
+    <!-- 
+      【改善点】
+      以前はここに直接HTMLで表を書いていましたが、
+      データが増えたときに修正しやすくするため、JavaScriptで自動生成する場所にしました。
+    -->
+    <table id="skills-table">
+      <!-- ここにJavaScriptでデータが入ります -->
+    </table>
 
-<h3>Skills</h3>
-<table>
-  <tr>
-    <th>OS</th>
-    <td>Windows, Mac など</td>
-  </tr>
-  <tr>
-    <th>Engine, Frameworks</th>
-    <td>まだ勉強中</td>
-  </tr>
-  <tr>
-    <th>Tool, MiddleWare</th>
-    <td>まだ勉強中</td>
-  </tr>
-  <tr>
-    <th>資格・免許</th>
-    <td>簿記３級学習中</td>
-  </tr>
-</table>
+    <h3>Works</h3>
+    <p>アピールできる活動内容を書きましょう。</p>
+    <!-- ここもリストを自動生成します -->
+    <ul id="works-list">
+      <!-- ここにJavaScriptでデータが入ります -->
+    </ul>
 
-<h3>Works</h3>
-<p>アピールできる活動内容を書きましょう。</p>
-<ul>
-  <li><a href="<https://github.com/>">高校で生徒会長やってました！</a></li>
-  <li><a href="<https://qiita.com/>">英語のプレゼン大会に出場しました！</a></li>
-   <li><a href="<https://qiita.com/>">日経STEAMのプレゼン大会に出場しました！</a></li>
+    <h3>Contact</h3>
+    <p>連絡先や SNS のアカウントを書きましょう。</p>
+    <ul>
+      <li><a href="mailto:name@example.com">Mail</a></li>
+      <li>251zs03932@student.zen.ac.jp</li>
+    </ul>
 
-<h3>Contact</h3>
-<p>連絡先や SNS のアカウントを書きましょう。</p>
-<ul>
-  <li><a href="mailto:name@example.com">Mail</a></li>
-  251zs03932@student.zen.ac.jp
+    <h3>History</h3>
+    <p>学歴、職歴、アルバイト、インターン経験など。</p>
+    <!-- 年表もデータ化しておくと追加が楽になります -->
+    <table id="history-table">
+      <!-- ここにJavaScriptでデータが入ります -->
+    </table>
 
-</ul>
+    <h3>好きな動画</h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/S20yrqV4LpE?si=Hq6L1M7M1M7M1M7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-<h3>History</h3>
-<p>学歴、職歴、アルバイト、インターン経験など。</p>
-<table>
-  <tr>
-    <th>2025 年</th>
-    <td><a href="<https://dwango.co.jp/>">ZEN大学</a> 入学</td>
-  </tr>
-  <tr>
-    <th>2023 年</th>
-    <td><a href="<https://nnn.ed.jp/>">日経STEAM</a> のプレゼン大会に出場</td>
-  </tr>
-  <tr>
-    <th>2022 年</th>
-    <td>英語のプレゼン大会に出場</td>
-  </tr>
-</table>
-<h3>好きな動画</h3>
-<iframe width="560" height="315" src="<https://www.youtube.com/embed/TO-_3tck2tg?si=wWdI4ETZKhaSz2oz>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<h3>Open Processing</h3>
-<iframe src="<https://openprocessing.org/sketch/2806029/embed/>" width="1500" height="600"></iframe>
-```
+    <!-- 
+      =======================================================
+      ここからが「Webアプリケーション開発2」の応用部分です
+      =======================================================
+    -->
+    <script>
+      // 1. データを「変数（配列とオブジェクト）」に入れて整理整頓します。
+      // HTMLの中に直接文字を書くより、ここを編集するほうがミスが減ります。
 
-</body>
+      // スキル一覧
+      const skillsData = [
+        { name: "OS", detail: "Windows, Mac など" },
+        { name: "Engine, Frameworks", detail: "まだ勉強中" },
+        { name: "Tool, MiddleWare", detail: "まだ勉強中" },
+        { name: "資格・免許", detail: "簿記３級学習中" }
+      ];
+
+      // 実績・作品一覧
+      const worksData = [
+        { title: "高校で生徒会長やってました！", url: "https://github.com/" },
+        { title: "英語のプレゼン大会に出場しました！", url: "https://qiita.com/" },
+        { title: "日経STEAMのプレゼン大会に出場しました！", url: "https://qiita.com/" }
+      ];
+
+      // 経歴一覧
+      const historyData = [
+        { year: "2025 年", event: '<a href="https://dwango.co.jp/">ZEN大学</a> 入学' },
+        { year: "2023 年", event: '<a href="https://nnn.ed.jp/">日経STEAM</a> のプレゼン大会に出場' },
+        { year: "2022 年", event: '英語のプレゼン大会に出場' }
+      ];
+
+
+      // 2. JavaScriptでHTMLを組み立てて、画面に表示させます。
+      
+      // --- Skills (テーブル) の生成 ---
+      const skillsTable = document.getElementById('skills-table');
+      skillsData.forEach((item) => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `<th>${item.name}</th><td>${item.detail}</td>`;
+        skillsTable.appendChild(tr);
+      });
+
+      // --- Works (リスト) の生成 ---
+      const worksList = document.getElementById('works-list');
+      worksData.forEach((item) => {
+        const li = document.createElement('li');
+        li.innerHTML = `<a href="${item.url}">${item.title}</a>`;
+        worksList.appendChild(li);
+      });
+
+      // --- History (テーブル) の生成 ---
+      const historyTable = document.getElementById('history-table');
+      historyData.forEach((item) => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `<th>${item.year}</th><td>${item.event}</td>`;
+        historyTable.appendChild(tr);
+      });
+
+    </script>
+  </body>
 </html>
